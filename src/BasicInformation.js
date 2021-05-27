@@ -259,8 +259,8 @@ className={classes.field}
 
 <Box  style={{marginLeft:`${2}em`}}>
 <Box style={{display:`flex`}}>
-<Box className={classes.option} id="first"  onClick={ setInternet(`Yes`)}>{internet}</Box>
-<Box className={classes.option}  id="first"  onClick={ setInternet(`No`)}>No</Box>
+<Box className={classes.option} id="first"  onClick={ setInternet(`Yes`)} >{internet}</Box>
+<Box className={classes.option}  id="first"  onClick={ setInternet(`Yes`)}>No</Box>
 </Box>
 </Box>
 </div>
@@ -274,7 +274,7 @@ First Nation, Métis or Inuit?</Typography>
 <Box  style={{marginLeft:`${2.5}em`}}>
   <Box style={{display:`flex`}}>
 <Box className={classes.option}  id="second" onClick={ setIndegious(`Yes`)}>{indegious}</Box>
-<Box className={classes.option}  id="second" onClick={ setIndegious(`No`)}>No</Box>
+<Box className={classes.option}  id="second" onClick={ setIndegious(`Yes`)}>No</Box>
 </Box>
 </Box>
 </div>
