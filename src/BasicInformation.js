@@ -14,12 +14,12 @@ const useStyles = makeStyles(() => ({
 text: {
   border:`${1}px solid #1A6F4C`,
   borderRadius:`${9}px`,
-  width:`${18}em`
+  width:`${17}em`,
 },
 field: {
   border:`${1}px solid #1A6F4C`,
   borderRadius:`${9}px`,
-  width:`${87}%`,
+  width:`${94}%`,
   marginTop:`${1.5}em`
 },
 navigate: {
@@ -36,7 +36,7 @@ navigate: {
 step: {
   border:`${1}px solid #1A6F4C`,
   color:`#1A6F4C`,
-  width:`${145}px`,
+  width:`${125}px`,
   height:`${25}px`,
   borderRadius:`${10}px`,
   paddingTop:`${4}px`,
@@ -75,7 +75,7 @@ const BasicInformation = ({increment}) => {
     return(
         <>
         <Container >
-<Typography variant="h5" style={{color:`#1A6F4C`,marginLeft:`${-5}em`}}>Tell us about yourself:</Typography>
+<Typography variant="h5" style={{color:`#1A6F4C`,marginLeft:`${-3}em`,fontSize:`${20}px`}}>Tell us about yourself:</Typography>
          <Formik
                   enableReinitialize
                     initialValues={{
@@ -88,7 +88,7 @@ const BasicInformation = ({increment}) => {
                     onSubmit={(Values) => increment + 1}
                   >
                         {({ handleSubmit, handleChange, errors }) => (
-                             <form style={{overflowY:`scroll`,margin:`${-1}em ${0}px ${0}px ${-8}em`,width:`${55}vw`,height:`${70}vh`}} onSubmit={handleSubmit}>
+                             <form style={{overflowY:`scroll`,overflowX:`hidden`,margin:`${-0.5}em ${0}px ${0}px ${-5}em`,width:`${60}vw`,height:`${70}vh`}} onSubmit={handleSubmit}>
     <div style={{display:`flex`,marginTop:`${1.5}em`}}>
   <Box>
 <TextField
@@ -160,7 +160,7 @@ className={classes.text}
   <Box className={classes.navigate} onClick={ setValue(12)} > 12</Box>
   <Box className={classes.navigate} onClick={ setValue(13)} >13 </Box>
 </Box>
-<Box style={{marginLeft:`${3}em`}} >
+<Box style={{marginLeft:`${2}em`}} >
 <TextField
 variant="outlined"
 type="text"
@@ -200,8 +200,8 @@ className={classes.field}
 </Box>
 
 <div style={{display:`flex`,marginTop:`${1}em`,marginBottom:`${1}em`}}>
-  <Box>
-<Typography style={{color:`#323865`,fontWeight:600,fontSize:`${0.9}em`}}>Do you have access to a laptop and internet  that you can complete the <br/> program at home?</Typography>
+  <Box style={{marginLeft:`${2}em`}}>
+<Typography style={{color:`#323865`,fontWeight:600,fontSize:`${0.8}em`}}>Do you have access to a laptop and internet  that you can complete the <br/> program at home?</Typography>
 </Box>
 
 <Box  style={{marginLeft:`${2}em`}}>
@@ -213,12 +213,12 @@ className={classes.field}
 </div>
 
 <div style={{display:`flex`,marginTop:`${1}em`,marginBottom:`${1}em`}}>
-  <Box>
-  <Typography style={{color:`#323865`,fontWeight:600,fontSize:`${0.9}em`}}>Do you wish to self‑identify as an Indigenous person  in Canada, such as <br/> 
+  <Box style={{marginLeft:`${2}em`}}>
+  <Typography style={{color:`#323865`,fontWeight:600,fontSize:`${0.8}em`}}>Do you wish to self‑identify as an Indigenous person  in Canada, such as <br/> 
 First Nation, Métis or Inuit?</Typography>
 </Box>
 
-<Box  style={{marginLeft:`${2}em`}}>
+<Box  style={{marginLeft:`${2.5}em`}}>
   <Box style={{display:`flex`}}>
 <Box className={classes.option}>Yes</Box>
 <Box className={classes.option}>No</Box>

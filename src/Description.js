@@ -4,7 +4,7 @@ import { Typography, Container } from "@material-ui/core";
 const Description = () => {
   return (
     <>
-      <Container maxWidth="sm" style={{marginLeft:`${-7}em`,width:`${50}vw`}}>
+      <Container maxWidth="sm" style={{marginLeft:`${-5}em`,width:`${55}vw`,overflowY:`scroll`,height:`${70}vh`}}>
         <Typography
           variant="p"
           style={{ color: `#323865`, fontFamily: `poppins` }}

@@ -8,7 +8,8 @@ import {
   Box,
  ListItem,
  List,
- ListItemText
+ Typography,
+ 
 } from "@material-ui/core";
 import BasicInformation from "./BasicInformation.js";
 import Description from "./Description.js";
@@ -29,15 +30,15 @@ const useStyles = makeStyles(() => ({
    
   },
   item: {
-    marginTop:`${1.5}em`,
+    marginTop:`${1}em`,
   },
   contain: {
     marginTop:`${2}em`
   },
 
   Box: {
-    width:`${14}px`,
-    height:`${14}px`,
+    width:`${8}px`,
+    height:`${8}px`,
     background:`#BFEDEA`,
     border:`${7}px solid #BFEDEA`,
     borderRadius:`${50}px`,
@@ -45,7 +46,8 @@ const useStyles = makeStyles(() => ({
   },
   stepname: {
    color:`#fff`,
-   marginLeft:`${1}em`
+   marginLeft:`${0.8}em`,
+   fontSize:`${0.9}em`
   }
 }));
 const App = () => {   
@@ -67,32 +69,32 @@ return (
   <List >
   <ListItem className={classes.item} >
   <Box style={ activeStep === 1 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} size="small" className={classes.Box}/>
-  <ListItemText className={classes.stepname}  primary="Description" />
+  <Typography className={classes.stepname}  > Description</Typography>
   </ListItem>
 
   <ListItem className={classes.item}>
   <Box size="small" style={ activeStep === 2 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} className={classes.Box}/>
-  <ListItemText className={classes.stepname} primary="Basic Information" />
+  <Typography className={classes.stepname}> Basic Information </Typography>
   </ListItem>
 
   <ListItem className={classes.item}>
   <Box size="small" style={ activeStep === 3 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} className={classes.Box}/>
-  <ListItemText className={classes.stepname} primary="Long form responses" />
+  <Typography className={classes.stepname}  > Long form responses</Typography>
   </ListItem >
 
   <ListItem className={classes.item}>
   <Box size="small" style={ activeStep === 4 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} className={classes.Box}/>
-  <ListItemText className={classes.stepname} primary="Supplementary documents" />
+  <Typography className={classes.stepname}  > Supplementary documents</Typography>
   </ListItem >
 
   <ListItem className={classes.item}>
   <Box size="small" style={ activeStep === 5 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} className={classes.Box}/>
-  <ListItemText className={classes.stepname} primary="Survey Questions" />
+  <Typography className={classes.stepname}  >Survey Questions </Typography>
   </ListItem>
 
   <ListItem className={classes.item}>
   <Box size="small" style={ activeStep === 6 ? {background:`#1A6F4C`}  : {background:`#BFEDEA`}} className={classes.Box}/>
-  <ListItemText className={classes.stepname} primary="Review and Submit" />
+  <Typography className={classes.stepname} > Review and Submit</Typography>
   </ListItem>
   </List>
  
