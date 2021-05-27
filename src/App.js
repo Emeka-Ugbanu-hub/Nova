@@ -4,10 +4,7 @@ import {
    makeStyles,
   Grid,
   Button,
-  Divider,
-  Typography,
-  Container,
-  InputLabel,
+  Container, 
   Box,
  ListItem,
  List,
@@ -121,7 +118,7 @@ return (
                 marginTop:`${1}em`,
                 marginLeft:`${30}em`,
                 fontSize:`${0.8}em`,
-                borderRadius:`${0,5}em`,
+                borderRadius:`${0.5}em`,
                 fontFamily:`poppins`,
                 fontWeight:900
                 }} 
