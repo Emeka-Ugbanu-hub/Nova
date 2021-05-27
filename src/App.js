@@ -127,6 +127,7 @@ return (
                 borderRadius:`${0,5}em`,
                 fontFamily:`poppins`,
                 fontWeight:900
+                type="submit"
                 }} 
                 onClick={handleNext}
                 >
