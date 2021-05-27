@@ -13,10 +13,7 @@ import {
  List,
  ListItemText
 } from "@material-ui/core";
-import {Done} from "@material-ui/icons"
 import BasicInformation from "./BasicInformation.js";
-import Message from "./Message.js";
-import Review from "./Review.js";
 import Description from "./Description.js";
 
 const useStyles = makeStyles(() => ({
@@ -127,9 +124,9 @@ return (
                 borderRadius:`${0,5}em`,
                 fontFamily:`poppins`,
                 fontWeight:900
-                type="submit"
                 }} 
                 onClick={handleNext}
+                type="submit"
                 >
               Save and continue
               </Button>
