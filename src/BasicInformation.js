@@ -70,8 +70,8 @@ const SignupSchema = Yup.object().shape({
 
 const BasicInformation = ({increment}) => {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
-  const [Price, setPrice] = useState("no price now");
+  const [value, setValue] = useState(9);
+  const [Price, setPrice] = useState(">$35000");
     return(
         <>
         <Container >
@@ -154,7 +154,7 @@ className={classes.text}
 
   <Box style={{display:`flex`,marginTop:`${1}em`,position:`relative`}}>
   <Typography style={{position:`absolute`,bottom:`${1.8}em`,color:`#323865`,fontWeight:600}}>Current Grade</Typography>
-  <Box className={classes.navigate} onClick={ setValue(9)} > 9 </Box>
+  <Box className={classes.navigate} onClick={ setValue(9)} > {value} </Box>
   <Box className={classes.navigate} onClick={ setValue(10)} > 10 </Box>
   <Box className={classes.navigate} onClick={ setValue(11)} >11</Box>
   <Box className={classes.navigate} onClick={ setValue(12)} > 12</Box>
@@ -192,7 +192,7 @@ className={classes.field}
 
 <Typography style={{fontSize:`${0.7}em`}}>We ask for your household income to ensure that we are providing adequate opportunities to multiple students across Ontario</Typography>
 <Box style={{display:`flex`,marginTop:`${1}em`}}>
-  <Box className={classes.step} onClick={ setPrice(`>$35000`)} > >$35000 </Box>
+  <Box className={classes.step} onClick={ setPrice(`>$35000`)} > {Price} </Box>
   <Box className={classes.step} onClick={ setPrice(`$35,000 - $55,000`)} > $35,000 - $55,000 </Box>
   <Box className={classes.step} onClick={ setPrice(`$55,000 - $75,000`)} >$55,000 - $75,000</Box>
   <Box className={classes.step} onClick={ setPrice(`$100,000+`)} > $100,000+</Box>
