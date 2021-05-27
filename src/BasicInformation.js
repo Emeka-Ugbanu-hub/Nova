@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {
   TextField,
   Box,
@@ -71,7 +71,60 @@ const SignupSchema = Yup.object().shape({
 const BasicInformation = ({increment}) => {
   const classes = useStyles();
   const [value, setValue] = useState(9);
+  const [internet, setInternet] = useState('Yes');
+  const [indegious, setIndegious] = useState("Yes");
   const [Price, setPrice] = useState(">$35000");
+  useEffect(() => {
+   const id = document.querySelectorAll("#box");
+   const price = document.querySelectorAll("#price");
+   const first = document.querySelectorAll("#first");
+   const second = document.querySelectorAll("#second");
+
+   const tab =  (target) => {
+    var x =0;
+    while(x < target.length){
+      target[x].style.background="#fff";
+      target[x].style.color="#1A6F4C";
+      x++
+    }
+  }
+   for(let i = 0; i < id.length; i++){
+     id[i].addEventListener("click",(e)=>{
+      tab(id)
+       e.target.style.background="#1A6F4C";
+       e.target.style.color="#fff";
+
+     })
+    }
+
+     for(let i = 0; i < price.length; i++){
+      price[i].addEventListener("click",(e)=>{
+       tab(price)
+        e.target.style.background="#1A6F4C";
+        e.target.style.color="#fff";
+ 
+      })
+   }
+   for(let i = 0; i < first.length; i++){
+    first[i].addEventListener("click",(e)=>{
+     tab(first)
+      e.target.style.background="#1A6F4C";
+      e.target.style.color="#fff";
+
+    })
+ }
+
+ for(let i = 0; i < second.length; i++){
+  second[i].addEventListener("click",(e)=>{
+   tab(second)
+    e.target.style.background="#1A6F4C";
+    e.target.style.color="#fff";
+
+  })
+}
+    
+  }, []);
+  
     return(
         <>
         <Container >
@@ -154,11 +207,11 @@ className={classes.text}
 
   <Box style={{display:`flex`,marginTop:`${1}em`,position:`relative`}}>
   <Typography style={{position:`absolute`,bottom:`${1.8}em`,color:`#323865`,fontWeight:600}}>Current Grade</Typography>
-  <Box className={classes.navigate} onClick={ setValue(9)} > {value} </Box>
-  <Box className={classes.navigate} onClick={ setValue(10)} > 10 </Box>
-  <Box className={classes.navigate} onClick={ setValue(11)} >11</Box>
-  <Box className={classes.navigate} onClick={ setValue(12)} > 12</Box>
-  <Box className={classes.navigate} onClick={ setValue(13)} >13 </Box>
+  <Box className={classes.navigate} id="box" onClick={ setValue(9)} > {value} </Box>
+  <Box className={classes.navigate} id="box" onClick={ setValue(10)} > 10 </Box>
+  <Box className={classes.navigate} id="box" onClick={ setValue(11)} >11</Box>
+  <Box className={classes.navigate} id="box" onClick={ setValue(12) } > 12</Box>
+  <Box className={classes.navigate} id="box" onClick={ setValue(13)} >13 </Box>
 </Box>
 <Box style={{marginLeft:`${2}em`}} >
 <TextField
@@ -192,10 +245,10 @@ className={classes.field}
 
 <Typography style={{fontSize:`${0.7}em`}}>We ask for your household income to ensure that we are providing adequate opportunities to multiple students across Ontario</Typography>
 <Box style={{display:`flex`,marginTop:`${1}em`}}>
-  <Box className={classes.step} onClick={ setPrice(`>$35000`)} > {Price} </Box>
-  <Box className={classes.step} onClick={ setPrice(`$35,000 - $55,000`)} > $35,000 - $55,000 </Box>
-  <Box className={classes.step} onClick={ setPrice(`$55,000 - $75,000`)} >$55,000 - $75,000</Box>
-  <Box className={classes.step} onClick={ setPrice(`$100,000+`)} > $100,000+</Box>
+  <Box className={classes.step} id="price" onClick={ setPrice(`>$35000`)} > {Price} </Box>
+  <Box className={classes.step} id="price" onClick={ setPrice(`$35,000 - $55,000`)} > $35,000 - $55,000 </Box>
+  <Box className={classes.step} id="price" onClick={ setPrice(`$55,000 - $75,000`)} >$55,000 - $75,000</Box>
+  <Box className={classes.step} id="price" onClick={ setPrice(`$100,000+`)} > $100,000+</Box>
 </Box>
 </Box>
 
@@ -206,8 +259,8 @@ className={classes.field}
 
 <Box  style={{marginLeft:`${2}em`}}>
 <Box style={{display:`flex`}}>
-<Box className={classes.option}>Yes</Box>
-<Box className={classes.option}>No</Box>
+<Box className={classes.option} id="first"  onClick={ setInternet(`Yes`)}>{internet}</Box>
+<Box className={classes.option}  id="first"  onClick={ setInternet(`No`)}>No</Box>
 </Box>
 </Box>
 </div>
@@ -220,8 +273,8 @@ First Nation, Métis or Inuit?</Typography>
 
 <Box  style={{marginLeft:`${2.5}em`}}>
   <Box style={{display:`flex`}}>
-<Box className={classes.option}>Yes</Box>
-<Box className={classes.option}>No</Box>
+<Box className={classes.option}  id="second" onClick={ setIndegious(`Yes`)}>{indegious}</Box>
+<Box className={classes.option}  id="second" onClick={ setIndegious(`No`)}>No</Box>
 </Box>
 </Box>
 </div>
