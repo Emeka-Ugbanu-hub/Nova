@@ -11,6 +11,7 @@ import {
  Typography,
  
 } from "@material-ui/core";
+import CloseIcon from '@material-ui/icons/Close';
 import BasicInformation from "./BasicInformation.js";
 import Description from "./Description.js";
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles(() => ({
    
   },
   item: {
-    marginTop:`${1}em`,
+    marginTop:`${0.8}em`,
   },
   contain: {
     marginTop:`${2}em`
@@ -47,8 +48,8 @@ const useStyles = makeStyles(() => ({
   stepname: {
    color:`#fff`,
    marginLeft:`${0.8}em`,
-   fontSize:`${0.9}em`
-  }
+   fontSize:`${0.8}em`
+  },
 }));
 const App = () => {   
   const classes = useStyles();
@@ -98,6 +99,20 @@ return (
   </ListItem>
   </List>
  
+ <Button
+ style={{
+  background:`#fff`,
+  color:`#1A6F4C`,
+  width:`${90}%`,
+  height:`${20}px`,
+  marginTop:`${1}em`,
+  marginLeft:`${1}em`,
+  fontSize:`${0.7}em`,
+  borderRadius:`${0.5}em`,
+  fontFamily:`poppins`,
+  fontWeight:900,
+ }}
+ >Save and exit {<CloseIcon/>}  </Button>
 </Container>
               </Grid>
 
